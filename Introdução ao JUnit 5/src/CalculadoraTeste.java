@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -40,6 +42,15 @@ public class CalculadoraTeste {
         //Calculadora calculadora = new Calculadora();
         assertEquals(0.0, calculadora.soma(2,-2));
     }
+
+    //Anotação que indica que esse método setup() deve ser executado antes de todos os testes
+    @BeforeAll
+    public static void setup(){
+        calculadora = new Calculadora();
+    }
+
+    //Outros: @BeforeEach, @AfterEach, @AfterAll
+
 
 
 }
