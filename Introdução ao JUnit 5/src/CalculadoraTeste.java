@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public class CalculadoraTeste {
@@ -26,6 +27,18 @@ public class CalculadoraTeste {
         if(temErro){
             fail("Houve um erro na validação da soma.!");
         }
+    }
+    
+    @Test
+    public void deveResultarQuatroAoSomarDoisEDois(){
+        //Calculadora calculadora = new Calculadora();
+        assertEquals(4.0, calculadora.soma(2,2));
+    }
+
+    @Test
+    public void deveResultarZeroAoSomarDoisMenosDois(){
+        //Calculadora calculadora = new Calculadora();
+        assertEquals(0.0, calculadora.soma(2,-2));
     }
 
 
